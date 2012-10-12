@@ -1,0 +1,8 @@
+Odugen.VkOAuth2Client
+==================
+
+This is basic client to authorize through OAuth2 for social network http://vk.com to be used in MVC 4 projects
+
+To register client
+--------------------
+            OAuthWebSecurity.RegisterClient(new VkClient(appId, appSecret), "VK", new Dictionary<string, object>());
