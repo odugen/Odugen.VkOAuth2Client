@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Net;
 using System.Text;
+using DotNetOpenAuth.AspNet;
 using DotNetOpenAuth.AspNet.Clients;
 using Newtonsoft.Json;
 
@@ -10,6 +11,12 @@ namespace Odugen.VkOAuth2Client
 {
     public sealed class VkClient : OAuth2Client
     {
+
+        public static IAuthenticationClient Create(string appId, string appSecret)
+        {
+            return new VkClient(appId, appSecret);
+        }
+
         #region Constants and Fields
 
         private readonly string _appId;
